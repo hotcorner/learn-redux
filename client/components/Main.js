@@ -8,9 +8,10 @@ class Main extends Component {
         <h1>
           <Link to="/">Clintstagram</Link>
         </h1>
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     );
   }
 }
-
+//console.log(this.props.children);
 export default Main;
