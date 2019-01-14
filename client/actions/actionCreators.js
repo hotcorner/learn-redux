@@ -12,7 +12,7 @@ export function addComment(postId, author, comment) {
     comment
   };
 }
-export function increment(postId, i) {
+export function deleteComment(postId, i) {
   return {
     type: 'DELETE_COMMENT',
     postId,
