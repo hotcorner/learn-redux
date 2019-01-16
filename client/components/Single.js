@@ -10,10 +10,12 @@ class Single extends Component {
     }
     const index = this.props.posts.findIndex(matchPostWithPostId);
     const post = this.props.posts[index];
+    const postComments = this.props.comments[postId] || [];
+
     return (
       <div className="single-photo">
         <Photo index={index} post={post} {...this.props} />
-        <Comments />
+        <Comments postComments={postComments} />
       </div>
     );
   }
