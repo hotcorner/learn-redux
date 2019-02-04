@@ -23,7 +23,7 @@ class Comments extends Component {
     this.props.deleteComment(postId, index);
   }
 
-  handleComment(e) {
+  addComment(e) {
     e.preventDefault();
     const { postId } = this.props.params;
     const { author, comment } = this.refs;
@@ -37,7 +37,7 @@ class Comments extends Component {
         <form
           ref="commentForm"
           className="comment-form"
-          onSubmit={this.handleComment.bind(this)}
+          onSubmit={this.addComment.bind(this)}
         >
           <input type="text" ref="author" placeholder="Author" />
           <input type="text" ref="comment" placeholder="Your Comment" />
